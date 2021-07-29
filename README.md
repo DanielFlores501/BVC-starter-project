@@ -17,7 +17,7 @@ The CNN architecure went through many iterations as I grappled with the model ov
 # Results
 The final architecture results in the model reaching up to 100% training accuracy, and 95% validation accuracy. On some iterations, this model will not train as well, so there can be some variation in the results.
 
-[epoch_10](https://user-images.githubusercontent.com/44532574/127577735-88a69230-4b0a-4a9b-b550-086145ccc730.png)
+![epoch_10](https://user-images.githubusercontent.com/44532574/127577735-88a69230-4b0a-4a9b-b550-086145ccc730.png)
 
 
 # Potential Future Steps
