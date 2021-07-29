@@ -2,6 +2,14 @@
 
 In this project, I used a convolutional nerual net to detect the presence of an International Symbol of Access (ISA) within an image. This project allowed me to revisit a model that I had studied before in classes that can take some fine tuning to get to optimal performance, as well as practice gathering and cleaning data. 
 
+# Usage
+To run this project, download the dataset below. Then run the following commands in a terminal:
+```
+python image-set-generator.py
+python preprocess.py
+python cnn-model.py
+```
+
 # Data
 
 The dataset used is the Stanford Background Dataset, and it consists of 715 images of outdoor scenes. These images served as random backgorunds, to which I applied the ISA to at random in 'image-set-generator.py'. I also cropped the images, and placed the ISA at random positions in the image. This resulted in a dataset where about half of the images contained the sign. I chose this dataset and the International Symbol of Access to create a project that resembles what I hope to do in CS, which is to use machine learning to help others and benefit humanity. 
