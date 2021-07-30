@@ -16,6 +16,11 @@ The dataset used is the Stanford Background Dataset, and it consists of 715 imag
 
 The link to download the dataset: https://www.kaggle.com/balraj98/stanford-background-dataset
 
+Some example photos:
+![4100246](https://user-images.githubusercontent.com/44532574/127711506-c77a4af5-ff5e-4188-8775-d3a3c24ba90c.jpg)
+![5000131](https://user-images.githubusercontent.com/44532574/127711512-2ed9ff63-4ace-4c38-bfe2-880d5c6ac77a.jpg)
+![6000049](https://user-images.githubusercontent.com/44532574/127711561-b348033d-c363-494e-a9f1-6c87e53befdb.jpg)
+
 # Architecture
 
 The CNN architecure went through many iterations as I grappled with the model overfitting to the relatively small amount of data I had, and the model not training at all. In its current iteration, the model uses Keras' Sequental model class with four 2D Convolution layers, four 2D Max Pooling layers, a Flatten layer, and two Dense layers with the final one using sigmoid activation, while all others use RELU. 
