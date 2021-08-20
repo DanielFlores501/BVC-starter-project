@@ -9,7 +9,10 @@ python image-set-generator.py
 python preprocess.py
 python cnn-model.py
 ```
-
+To run gradCAM Implementation, create the model with the commands above then use the following:
+```
+python gradcam-implementation.py
+```
 # Data
 
 The dataset used is the Stanford Background Dataset, and it consists of 715 images of outdoor scenes. These images served as random backgorunds, to which I applied the ISA to at random in 'image-set-generator.py'. I also cropped the images, and placed the ISA at random positions in the image. This resulted in a dataset where about half of the images contained the sign. I chose this dataset and the International Symbol of Access to create a project that resembles what I hope to do in CS, which is to use machine learning to help others and benefit humanity. 
@@ -32,9 +35,13 @@ The final architecture results in the model reaching up to 100% training accurac
 
 ![epoch_10](https://user-images.githubusercontent.com/44532574/127577735-88a69230-4b0a-4a9b-b550-086145ccc730.png)
 
+To gain a deeper understand as to how the model was classifying the images, I implemented GradCAM based on Adrian Rosebrock's similar implementation. The results show the model correctly identifying where in the image the International Symbol of Access is. In the examples below, the first image is the original, followed by the heatmap, then a text bar indicating the Truth (T), and Prediction from the model (P), if there is a sign present. At the bottom is the image with the heatmap overlayed to show that they do indeed line up. 
+![sign_ex1](https://user-images.githubusercontent.com/44532574/130299097-e1603bdb-491c-4673-bdef-320b3d0c1f9e.png)
+![no_sign_ex2](https://user-images.githubusercontent.com/44532574/130299497-0fd7230b-47f0-4127-a84f-9c3963b2bb8a.png)
+![sign_ex2](https://user-images.githubusercontent.com/44532574/130299505-01d8c285-d0c4-4e5b-aed7-a4465a817f4f.png)
 
 # Potential Future Steps
-There are several improvements I can see for this model. For example, a larger dataset would provide more insight to the viability of this model on a larger scale, as the dataset of 715 images only tells us so much about what the model can do. Also, the model currently takes 7 - 9 epochs to reach 95% validation accuracy, so using pretrained weights or further tinkering with the model architecture could lead to better performance. And beyond the scale of this project, identifying an International Symbol of Access is just one of the many tasks a deep learning model such as this one would need to help the people who need it. 
+There are several improvements I can see for this model. For example, a larger dataset would provide more insight to the viability of this model on a larger scale, as the dataset of 715 images only tells us so much about what the model can do. Also, the model only trains on images where the sign appears facing the camera, unobstructed. A more difficult but realistic dataset with obstructions, light changes, and transformed signs would challenge this model and be more useful. Beyond the scale of this project, identifying an International Symbol of Access is just one of the many tasks a deep learning model such as this one would need to help the people who need it. 
 
 # References
 
